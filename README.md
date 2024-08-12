@@ -14,7 +14,7 @@ The main objective of this project was to develop a model that accurately predic
 
 During the EDA phase, we focused on understanding the dataset and preprocessing the data to ensure it was suitable for modeling. Key tasks included:
 
-- **Data Wrangling**: Processed columns like district coordinates and `_params_` for usability, handled outliers, and removed irrelevant columns.
+- **Data Wrangling**: Processed columns like district coordinates and `params` for usability, handled outliers, and removed irrelevant columns.
 - **Feature Engineering**: Extracted and transformed features to improve model performance.
 
 ### Model Building
@@ -30,8 +30,8 @@ We trained and evaluated several regression models using a straightforward one-h
 
 We applied NLP techniques to extract and utilize textual data within the dataset:
 
-- **Named Entity Recognition (NER)**: Extracted place names from the `_description_` column.
-- **Text Embeddings**: Generated embeddings from several string-based columns, including `_title_`, place names, `_media_types_`, `_security_types_`, `_equipment_types_`, and `_extras_types_`.
+- **Named Entity Recognition (NER)**: Extracted place names from the `description` column.
+- **Text Embeddings**: Generated embeddings from several string-based columns, including `title`, place names, `media_types`, `security_types`, `equipment_types`, and `extras_types`.
 
 ### Neural Network
 Finally, these embeddings were used to train a neural network aimed at improving the predictive performance of our models.
@@ -41,7 +41,7 @@ Finally, these embeddings were used to train a neural network aimed at improving
 The models built in this project provided a solid foundation for predicting real estate prices, but there are opportunities for improvement. Notably:
 
 - **Reassess Districts**: The dataset contains many small and overlapping districts. Gaining more contextual knowledge or applying clustering techniques could improve the accuracy of district-related features.
-- **Extract More Information from Descriptions**: Currently, only place names are extracted from the `_description_` column, but other valuable information may be present.
+- **Extract More Information from Descriptions**: Currently, only place names are extracted from the `description` column, but other valuable information may be present.
 - **Feature Selection**: Removing low-performing variables might enhance model performance.
 - **Hyperparameter Tuning**: A thorough hyperparameter search could further refine the models.
 - **Explore Neural Network Architectures**: Investigating more complex neural network architectures could yield better results.
